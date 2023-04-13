@@ -1,0 +1,1 @@
+# Magewire Plugin - Widget Resolver
