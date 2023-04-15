@@ -2,15 +2,6 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
-    <!-- add widget id to cache -->
-    <!--
-    <type name="Magento\Widget\Model\Config\Converter">
-        <plugin name="MVenghaus_MagewirePluginWidgetResolver_Plugin_Magento_Widget_Model_Config_ConverterPlugin"
-                type="MVenghaus\MagewirePluginWidgetResolver\Plugin\Magento\Widget\Model\Config\ConverterPlugin"
-        />
-    </type>
-    -->
-
     <!-- set magewire to block -->
     <type name="Magewirephp\Magewire\Observer\Frontend\ViewBlockAbstractToHtmlBefore">
         <plugin name="MVenghaus_MagewirePluginWidgetResolver_Plugin_Magewirephp_Magewire_Observer_Frontend_ViewBlockAbstractToHtmlBeforePlugin"
