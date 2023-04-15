@@ -58,10 +58,18 @@ class ViewBlockAbstractToHtmlBeforePlugin
 
     private function getWidgetData(AbstractBlock $block): array
     {
-        return array_filter(
-            $block->getData(),
-            fn(string $name) => !in_array($name, ['type', 'magewire',  'module_name']),
-            ARRAY_FILTER_USE_KEY
-        );
+        $widgetData = [];
+        foreach ($block->getData() as $name => $value) {
+            if (is_object($value) ||
+                in_array($name, ['type', 'magewire', 'module_name'])
+            ) {
+                continue;
+            }
+
+            $widgetData[$name] = $value;
+        }
+
+        return $widgetData;
+
     }
 }
