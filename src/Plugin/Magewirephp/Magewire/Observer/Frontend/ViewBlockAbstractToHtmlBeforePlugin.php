@@ -60,7 +60,7 @@ class ViewBlockAbstractToHtmlBeforePlugin
     {
         return array_filter(
             $block->getData(),
-            fn(string $name) => !in_array($name, ['type', 'magewire', 'store_id', 'module_name']),
+            fn(string $name) => !in_array($name, ['type', 'magewire',  'module_name']),
             ARRAY_FILTER_USE_KEY
         );
     }
